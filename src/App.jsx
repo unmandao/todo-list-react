@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
@@ -5,7 +6,9 @@ import Todo from "./components/Todo";
 function App(props) {
     console.log(props);
 
-    const taskList = props.tasks?.map((task) => (
+    const [tasks, setTasks] = useState(props.tasks);
+
+    const taskList = tasks?.map((task) => (
       <Todo id={task.id} 
             name={task.name} 
             completed={task.completed}
@@ -14,7 +17,8 @@ function App(props) {
     ));
 
     function addTask(name) {
-      alert(name);
+      const newTask = { id: "id", name, completed: false };
+      setTasks([...tasks, newTask]); //añadimos al array existente la nueva tarea
     }
 
     return (
