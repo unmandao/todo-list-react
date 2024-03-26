@@ -4,7 +4,8 @@ function Form(props) {
 
     function handleSubmit(event) {
       event.preventDefault();
-      props.addTask("Say hello!");
+      props.addTask(name);
+      setName("");
     }
 
     function handleChange(event) {
