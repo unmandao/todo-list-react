@@ -14,8 +14,13 @@ function App(props) {
             name={task.name} 
             completed={task.completed}
             key={task.id}
+            toggleTaskCompleted={toggleTaskCompleted}
       />
     ));
+
+    function toggleTaskCompleted(id) {
+      console.log(tasks[0]);
+    }
 
     function addTask(name) {
       const newTask = { id: `todo-${nanoid()}`, name, completed: false };
