@@ -7,8 +7,8 @@ function Form(props) {
       props.addTask("Say hello!");
     }
 
-    function handleChange() {
-      console.log("Typing!");
+    function handleChange(event) {
+      console.log(event.target.value);
     }
 
     const [name, setName] = useState("");
