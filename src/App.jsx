@@ -1,9 +1,9 @@
 import Todo from "./components/Todo";
 
 function App(props) {
-  return (
+    return (
     <div className="todoapp stack-large">
-      <h1 hiiden={false}>TodoMatic</h1>
+      <h1 hidden={false}>TodoMatic</h1>
       <form>
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">
@@ -43,7 +43,7 @@ function App(props) {
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading">
-        <Todo name="Eat" />
+        <Todo name="Eat" completed />
         <Todo name="Sleep" />
         <Todo name="Repeat" />
       </ul>
