@@ -7,6 +7,10 @@ function Form(props) {
       props.addTask("Say hello!");
     }
 
+    function handleChange() {
+      console.log("Typing!");
+    }
+
     const [name, setName] = useState("");
 
     return (
@@ -23,6 +27,7 @@ function Form(props) {
           name="text"
           autoComplete="off"
           value={name}
+          onChange={handleChange}
         />
         <button type="submit" className="btn btn__primary btn__lg">
           Add
