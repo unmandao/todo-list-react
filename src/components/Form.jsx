@@ -8,7 +8,7 @@ function Form(props) {
     }
 
     function handleChange(event) {
-      console.log(event.target.value);
+      setName(event.target.value);
     }
 
     const [name, setName] = useState("");
