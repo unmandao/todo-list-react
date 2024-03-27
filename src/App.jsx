@@ -33,7 +33,8 @@ function App(props) {
     }
 
     function deleteTask(id) {
-      console.log(id);
+      const remainingTasks = tasks.filter((task) => id !== task.id);
+      setTasks(remainingTasks);
     }
 
     function addTask(name) {
