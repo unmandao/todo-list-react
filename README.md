@@ -18,3 +18,5 @@ npm create vite@latest todo-list-react -- --template react
 npm install
 
 npm run dev
+
+Me llego en https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility
